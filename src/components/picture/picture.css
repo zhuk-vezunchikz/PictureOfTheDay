@@ -1,0 +1,7 @@
+.block {
+  display: flex;
+  margin-right: 50px;
+}
+.block img {
+  max-width: 100%;
+}
