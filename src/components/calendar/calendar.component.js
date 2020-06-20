@@ -20,7 +20,7 @@ const ReactCalendar = (props) => {
 
   return (
     <div className="item">
-      <Calendar onChange={onChange} value={defaultDate()} />
+      <Calendar onChange={onChange} value={defaultDate()} maxDate={new Date()} />
       <h1>Nasa Pictures of the Day</h1>
       <p>Меняйте дату на календаре, чтобы посмотреть фотографию дня</p>
     </div>
