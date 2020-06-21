@@ -1,8 +1,6 @@
 import { callAPI } from '../../../common/api/callAPI';
 import { pictureFailure, pictureRequest, pictureSuccess } from '../action';
 
-
-
 export const getPicture = (fullDate) => {
   return (dispatch) => {
     dispatch(pictureRequest());

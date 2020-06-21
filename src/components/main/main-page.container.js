@@ -33,7 +33,7 @@ const mapDispatchToProps = (dispatch) => {
     },
     getPicture: (date) => {
       dispatch(getPicture(date));
-    }
+    },
   };
 };
 

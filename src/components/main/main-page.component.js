@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Picture from '../../common/components/picture/Picture';
 import Calendar from '../../common/components/calendar/Calendar';
-import "./main-page.css";
+import './main-page.css';
 
 const MainPage = (props) => {
   useEffect(() => {
