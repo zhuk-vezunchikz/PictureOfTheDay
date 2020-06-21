@@ -1,4 +1,4 @@
-import Picture from './picture.component';
+import PictureHOC from './picture.component';
 import { connect } from 'react-redux';
 import { getPicture } from './reducer';
 
@@ -8,4 +8,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { getPicture })(Picture);
+export default connect(mapStateToProps, { getPicture })(PictureHOC);

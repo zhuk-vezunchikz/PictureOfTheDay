@@ -8,14 +8,15 @@ const ReactCalendar = (props) => {
   const [, setDate] = useState(new Date());
 
   const onChange = (date) => {
+    const fDate = formatDate(date);
     setDate(date);
     if (!localStore) {
-      localStorage.setItem('picture', { date: formatDate(date) });
+      localStorage.setItem('picture', { date: fDate });
     } else {
-      localStore.date = formatDate(date);
+      localStore.date = fDate;
       localStorage.setItem('picture', JSON.stringify(localStore));
     }
-    props.getPicture(formatDate(date));
+    props.getPicture(fDate);
   };
 
   return (
