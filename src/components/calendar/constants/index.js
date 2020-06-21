@@ -1,1 +1,0 @@
-export const localStore = JSON.parse(localStorage.getItem('picture'));

@@ -3,18 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {Provider} from "react-redux";
-import configureStore from "./common/store/creacteStore";
+import { Provider } from 'react-redux';
+import configureStore from './common/store/creacteStore';
 
-const store =configureStore();
+const store = (() => {
+  const pictureInfo = JSON.parse(localStorage.getItem('picture')) || {};
+  return configureStore({
+    mainState: { picture: pictureInfo.url, date: pictureInfo.date },
+  });
+})();
 
 ReactDOM.render(
   <React.StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
